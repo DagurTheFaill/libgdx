@@ -201,6 +201,11 @@ public class Lwjgl3Window implements Disposable {
 
 	void create (long windowHandle) {
 		this.windowHandle = windowHandle;
+
+		if (windowHandle == 0) {
+			System.out.println("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH");
+		}
+
 		this.input = application.createInput(this);
 		this.graphics = new Lwjgl3Graphics(this);
 
